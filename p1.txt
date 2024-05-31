@@ -1,0 +1,125 @@
+-- Punto 1
+-- a | Funcion: funcion1 'caracter' -> Devuelve un valor Boleano verdadero para aquel caracter que sea vocal y un valor Boleano Falso para aquel caracter que no es vocal.
+
+funcion1 'a'
+	True
+funcion1 'e'
+	True
+funcion1 'I'
+	True
+funcion1 'O'
+	True
+funcion1 'Z'
+	False
+funcion1 'b'
+	False
+
+-- b | Funcion: funcion2 'caracter' -> Devuelve un valor Boleano verdadero para aquel caracter que sea un digito dentro del rango (0-9) y un valor Boleano Falso para aquel caracter que no se encuentre en ese rango.
+
+funcion2 '0'
+	True
+funcion2 '4'
+	True
+funcion2 '7'
+	True
+funcion2 'a'
+	False
+funcion2 'B'
+	False
+funcion2 '<'
+	False
+
+	
+- Punto 2
+
+-- Función: funcion3 -> Recibe 2 parámetros; un número entero y un carácter. Devuelve el doble del número entero recibido si el segundo parámetro es una vocal. Devuelve el triple del número entero recibido si el segundo parámetro es un dígito. Si el segundo parámetro no es una vocal ni un dígito, devuelve el mismo entero recibido. 
+
+funcion3 12 'a'
+	24
+funcion3 3 'e'
+	6
+funcion3 12 'p'
+	12
+funcion3 30 'w'
+	30
+funcion3 5 '9'
+	15
+funcion3 20 '3'
+	60
+
+
+-- Punto 3
+-- Función: funcion4 [Integer] 'car' -> Recibe 2 parámetros; una lista de números y un carácter. Devuelve una lista en la que cada elemento sea el doble de cada número recibido si el segundo parámetro es una vocal. Devuelve una lista en la que cada elemento sea el triple de cada número recibido si el segundo parámetro es un dígito. Si el segundo parámetro no es una vocal ni un dígito, la función devuelve otra lista con los mismos elementos recibidos como primer parámetro.
+
+funcion4 [10,12,9,3,4,1] 'a'
+    [20,24,18,6,8,2]
+
+funcion4 [5,7,11,9,1] 'o'
+    [10,14,22,18,2]
+
+funcion4 [2,3,4,5,9] '7'
+    [6,9,12,15,27]
+
+funcion4 [6,8,10,13,16] '3'
+    [18,24,30,39,48]
+
+funcion4 [9,7,5,3,1] 'ú'
+    [9,7,5,3,1]
+
+funcion4 [2,3,5,6,7,8] 'q'
+    [2,3,5,6,7,8]
+
+
+
+-- Punto 4
+-- Función: funcion5 -> Recibe 3 parámetros; una lista de números enteros, un carácter y un entero. Devuelve una lista de numeros que cumplan con los criterios previamente establecidos
+
+funcion5 [10,12,9,3,4,1] 'b' 3
+	[10,12,9]
+
+funcion5 [6,5,3,7,2] 'g' 4
+	[6,5,3,7]
+
+funcion5 [10,6,12,7,14,2,4,3,9] 'u' 8
+	[20,12,24,14,28,4,8,6] 
+
+funcion5 [4,3,9,17,20,15] 'i' 11
+	[8,6,18,34,40,30]
+
+funcion5 [20,30,40,50,60,70,80,90] '1' 5
+	[60,90,120,150,180]
+
+funcion5 [11,13,15,17,19,21,27,29] '2' 2
+	[33, 39]
+
+
+-- Punto 5
+-- Función: funcion6 -> Recibe como parámetro un entero y devuelve una tupla de dos enteros; el primer elemento es el mismo número recibido y el segundo elemnto es el triple del parámetro. 
+
+funcion6 6
+	(6, 18)
+
+funcion6 9
+	(9, 27)
+
+
+-- Punto 6
+-- Función: funcion7 -> Recibe dos números enteros como parámetros; 'n' y 'cant'. Devuelve una lista con 'cant' tuplas de 2 elementos enteros. Primer tupla: el primer elemento debe ser n y el segundo es el triple del primer elemento. Para las siguientes tuplas el primer elemento debe ser igual al segundo elemento de la anterior tupla, y el segundo elemento es el triple del primer elemento de la actual tupla, y así sucesivamente. 
+
+funcion7 4 2
+	[(4, 12), (12, 36)]
+
+funcion7 9 0 
+	[]
+
+funcion7 3 5
+	[(3,9), (9,27), (27,81), (81,243), (243,729)]
+
+funcion7 10 (-1) 
+	[]
+
+funcion7 15 4
+	[(15,45), (45,135), (135,405), (405,1215)]
+
+funcion7 0 2
+	[(0,0), (0,0)]
